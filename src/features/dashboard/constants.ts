@@ -1,12 +1,12 @@
-import { Home, Building, Users, FileText, Smartphone, CheckSquare } from "lucide-react";
+import { Home } from "lucide-react";
 
 export const navItems = [
   { name: "Dashboard", icon: Home, isActive: true },
-  { name: "Listings", icon: Building, isActive: false },
-  { name: "Users", icon: Users, isActive: false },
-  { name: "Request", icon: FileText, isActive: false },
-  { name: "Applications", icon: Smartphone, isActive: false },
-  { name: "Tasks", icon: CheckSquare, isActive: false },
+  { name: "Listings", icon: "https://res.cloudinary.com/peterdbrainy/image/upload/v1785336043/Toolbox_uudg0u.png", isActive: false },
+  { name: "Users", icon: "https://res.cloudinary.com/peterdbrainy/image/upload/v1785336043/Toolbox_uudg0u.png", isActive: false },
+  { name: "Request", icon: "https://res.cloudinary.com/peterdbrainy/image/upload/v1785336297/Article_sxgfcs.png", isActive: false },
+  { name: "Applications", icon: "https://res.cloudinary.com/peterdbrainy/image/upload/v1785336368/applications_uwhih6.png", isActive: false },
+  { name: "Tasks", icon: "https://res.cloudinary.com/peterdbrainy/image/upload/v1785336428/task-square_gw4bho.png", isActive: false },
 ];
 
 import { userOverview, listingsOverview } from "./data/mockData";

@@ -33,11 +33,13 @@ export function StatCard({ title, icon, stats, onViewAll }: StatCardProps) {
         </button>
       </CardHeader>
       <CardContent className="px-6 pb-6 pt-2 flex-grow">
-        <div className="grid grid-cols-3 gap-y-6 gap-x-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-6 gap-x-4">
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col gap-1">
-              <span className="text-xs text-gray-500 font-medium">{stat.label}</span>
-              <span className="text-xl sm:text-2xl font-semibold text-gray-900 tracking-tight">
+              <span className="text-xs text-gray-500 font-medium">
+                {stat.label}
+              </span>
+              <span className="text-[19px] font-semibold text-gray-900 tracking-tight">
                 {formatNumber(stat.value)}
               </span>
             </div>

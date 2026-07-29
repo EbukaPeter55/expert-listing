@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MessageSquare, History, FileText, Wallet, Store, Menu, X } from "lucide-react";
+import { FileText, Wallet, Store, Menu, X } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 
@@ -8,32 +8,32 @@ export function TopNav() {
 
   return (
     <header className="bg-brand-primary text-white w-full sticky top-0 z-50">
-      <div className="px-4 sm:px-6 py-4 flex items-center justify-between relative z-50 bg-brand-primary">
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between relative z-50 bg-brand-primary">
         <div className="flex items-center gap-2">
-          {/* Placeholder logo icon */}
-          <div className="w-5 h-5 sm:w-6 sm:h-6 border-2 border-white rounded-sm transform rotate-45 flex items-center justify-center shrink-0">
-            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-sm transform -rotate-45" />
-          </div>
-          <span className="text-lg sm:text-xl font-semibold tracking-tight whitespace-nowrap">Expert Listing</span>
+          <img
+            src="https://res.cloudinary.com/peterdbrainy/image/upload/v1785335249/logo-expert-listing_bojehi.png"
+            alt="Expert Listing brand logo"
+            className="h-5 sm:h-6 lg:h-7 w-auto max-w-[160px] sm:max-w-[200px] object-contain shrink-0"
+          />
         </div>
 
         <div className="flex items-center gap-4 sm:gap-6">
           <div className="hidden md:flex items-center gap-6">
             <button className="hover:opacity-80 transition-opacity relative">
-              <MessageSquare className="w-5 h-5" />
+              <img src="https://res.cloudinary.com/peterdbrainy/image/upload/v1785337071/Comments_xcbqvg.png" alt="Comments" className="w-5 h-5 object-contain" />
               <span className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span>
             </button>
             <button className="hover:opacity-80 transition-opacity">
-              <History className="w-5 h-5" />
+              <img src="https://res.cloudinary.com/peterdbrainy/image/upload/v1785337178/Activity_Log_ensnij.png" alt="Activity Log" className="w-5 h-5 object-contain" />
             </button>
             <button className="hover:opacity-80 transition-opacity">
-              <FileText className="w-5 h-5" />
+              <img src="https://res.cloudinary.com/peterdbrainy/image/upload/v1785337325/Waitlist_i9benx.png" alt="Waitlist" className="w-5 h-5 object-contain" />
             </button>
             <button className="hover:opacity-80 transition-opacity">
-              <Wallet className="w-5 h-5" />
+              <img src="https://res.cloudinary.com/peterdbrainy/image/upload/v1785337432/wallet-2_zxzdys.png" alt="Waitlist" className="w-5 h-5 object-contain" />
             </button>
             <button className="hover:opacity-80 transition-opacity">
-              <Store className="w-5 h-5" />
+              <img src="https://res.cloudinary.com/peterdbrainy/image/upload/v1785337555/shop_gxmcqp.png" alt="Shop" className="w-5 h-5 object-contain" />
             </button>
           </div>
 
@@ -62,12 +62,12 @@ export function TopNav() {
         <div className="flex justify-around items-center px-4 py-6">
           <button className="hover:opacity-80 transition-transform hover:scale-110 relative flex flex-col items-center gap-1">
             <div className="relative">
-              <MessageSquare className="w-5 h-5" />
+              <img src="https://res.cloudinary.com/peterdbrainy/image/upload/v1785337071/Comments_xcbqvg.png" alt="Comments" className="w-5 h-5 object-contain" />
               <span className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full shadow-[0_0_0_2px_var(--color-brand-primary)]"></span>
             </div>
           </button>
           <button className="hover:opacity-80 transition-transform hover:scale-110">
-            <History className="w-5 h-5" />
+            <img src="https://res.cloudinary.com/peterdbrainy/image/upload/v1785337178/Activity_Log_ensnij.png" alt="Activity Log" className="w-5 h-5 object-contain" />
           </button>
           <button className="hover:opacity-80 transition-transform hover:scale-110">
             <FileText className="w-5 h-5" />

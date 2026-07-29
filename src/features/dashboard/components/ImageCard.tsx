@@ -70,7 +70,7 @@ export function ImageCard({
       {/* Floating Chat Button */}
       {hasChat && (
         <button className="absolute right-4 bottom-[80px] p-3 rounded-full bg-black/60 backdrop-blur-md text-white shadow-lg hover:bg-black/80 transition-transform hover:scale-105 z-10">
-          <MessageSquare className="w-5 h-5" />
+          <img src="https://res.cloudinary.com/peterdbrainy/image/upload/v1785338887/messages-3_bhz2o3.png" alt="Chat" className="w-5 h-5 object-contain" />
         </button>
       )}
 

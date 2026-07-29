@@ -11,28 +11,31 @@ export function SalesOverview() {
 
   const filters = ["1 Week", "1 Month", "1 Year"];
 
-  const renderStatCard = (title: string, data: { amount: number, percentage: number, isPositive: boolean }, titleColor: string) => (
-    <div className="border border-gray-100 rounded-xl p-4 md:p-5 flex flex-col justify-between hover:shadow-md transition-shadow">
-      <div>
-        <h3 className={cn("text-xl md:text-2xl font-bold tracking-tight mb-2", titleColor)}>
-          {title === "Total Inflow" || title === "MRR" || title === "Total Riders' Credit"
-            ? "₦" + formatCurrency(data.amount).replace("NGN", "").trim()
-            : "₦" + formatCurrency(data.amount).replace("NGN", "").trim()
-          }
-        </h3>
-        <div className="flex items-center gap-2">
-          <span className="text-xs text-gray-500 font-medium">{title}</span>
-          <span className={cn(
-            "text-[10px] flex items-center px-1.5 py-0.5 rounded-full font-medium",
-            data.isPositive ? "text-green-700 bg-green-50" : "text-red-700 bg-red-50"
-          )}>
-            {data.isPositive ? <ArrowUpRight className="w-3 h-3 mr-0.5" /> : <ArrowDownRight className="w-3 h-3 mr-0.5" />}
-            {Math.abs(data.percentage)}%
-          </span>
+  const renderStatCard = (title: string, data: { amount: number, percentage: number, isPositive: boolean }, titleColor: string) => {
+    const amountStr = formatCurrency(data.amount);
+
+    return (
+      <div className="border border-gray-100 rounded-xl p-4 md:p-5 flex flex-col justify-between hover:shadow-md transition-shadow">
+        <div>
+          <h3 className={cn("text-[19px] font-bold tracking-tight mb-2", titleColor)}>
+            {amountStr}
+          </h3>
+          <div className="flex items-center gap-2">
+            <span className="text-xs text-gray-500 font-medium">
+              {title}
+            </span>
+            <span className={cn(
+              "text-[10px] flex items-center px-1.5 py-0.5 rounded-full font-medium shrink-0",
+              data.isPositive ? "text-green-700 bg-green-50" : "text-red-700 bg-red-50"
+            )}>
+              {data.isPositive ? <ArrowUpRight className="w-3 h-3 mr-0.5" /> : <ArrowDownRight className="w-3 h-3 mr-0.5" />}
+              {Math.abs(data.percentage)}%
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <Card className="p-0 overflow-hidden border-gray-100 shadow-sm h-full">
@@ -110,7 +113,7 @@ export function SalesOverview() {
           </button>
         </div>
 
-        <div className="w-full xl:w-[400px] flex-shrink-0 grid grid-cols-2 gap-4">
+        <div className="w-full xl:w-[480px] flex-shrink-0 grid grid-cols-1 sm:grid-cols-2 gap-4">
           {renderStatCard("Total Inflow", summaryStats.inflow, "text-blue-600")}
           {renderStatCard("MRR", summaryStats.mrr, "text-green-600")}
           {renderStatCard("Payout", summaryStats.payout, "text-orange-500")}
