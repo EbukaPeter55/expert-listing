@@ -1,12 +1,11 @@
-import { TopNav } from "./components/TopNav";
-import { SubNav } from "./components/SubNav";
-import { WelcomeHeader } from "./components/WelcomeHeader";
-import { SalesOverview } from "./components/SalesOverview";
-import { StatCard } from "./components/StatCard";
-import { ImageCard } from "./components/ImageCard";
+import { TopNav } from "../components/TopNav";
+import { SubNav } from "../components/SubNav";
+import { WelcomeHeader } from "../components/WelcomeHeader";
+import { SalesOverview } from "../components/SalesOverview";
+import { StatCard } from "../components/StatCard";
+import { ImageCard } from "../components/ImageCard";
 import { Home, Users } from "lucide-react";
-import { listingStats, usersStats } from "./constants";
-import { siteStats } from "./data/mockData";
+import { listingStats, usersStats, siteStats } from "../dashboard-constant";
 
 export function DashboardPage() {
 

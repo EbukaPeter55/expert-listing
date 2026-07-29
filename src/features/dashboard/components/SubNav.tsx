@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { navItems } from "../constants";
+import { navItems } from "../dashboard-constant";
 
 export function SubNav() {
   return (

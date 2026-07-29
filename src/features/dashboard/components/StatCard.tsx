@@ -1,11 +1,7 @@
 import { ChevronRight } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { formatNumber } from "../utils";
-
-interface StatItem {
-  label: string;
-  value: number;
-}
+import { formatNumber } from "@/lib/utils";
+import type { StatItem } from "../dashboard-type";
 
 interface StatCardProps {
   title: string;

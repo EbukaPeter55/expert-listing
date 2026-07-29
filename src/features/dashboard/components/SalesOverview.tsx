@@ -2,8 +2,8 @@ import { useState } from "react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from "recharts";
 import { ChevronLeft, ChevronRight, ArrowUpRight, ArrowDownRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { formatCurrency } from "../utils";
-import { salesData, summaryStats } from "../data/mockData";
+import { formatCurrency } from "@/lib/utils";
+import { salesData, summaryStats } from "../dashboard-constant";
 import { cn } from "@/lib/utils";
 
 export function SalesOverview() {
